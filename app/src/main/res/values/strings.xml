@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Convertidor</string>
+    <string name="length">Longitud</string>
+    <string name="volume">Volumen</string>
+    <string name="area">Área</string>
+    <string name="mass">Masa</string>
+    <string name="temperature">Temperatura</string>
+    <string name="time">Tiempo</string>
+    <string name="lengthSIMeterSymbol" translatable="false">m</string>
+    <string name="lengthSICentimeterSymbol" translatable="false">cm</string>
+    <string name="lengthSIMilimeterSymbol" translatable="false">mm</string>
+    <string name="lengthSIMicrometerSymbol" translatable="false">µm</string>
+    <string name="lengthSINanometerSymbol" translatable="false">nm</string>
+    <string name="lengthSIKilometerSymbol" translatable="false">km</string>
+    <string name="lengthImpInchSymbol" translatable="false">in</string>
+    <string name="lengthImpFootSymbol" translatable="false">ft</string>
+    <string name="lengthImpYardSymbol" translatable="false">yd</string>
+    <string name="lengthImpMileSymbol" translatable="false">mi</string>
+    <string name="lengthAstroAstronomicalUnitSymbol" translatable="false">AU</string>
+    <string name="lengthAstroLightYearSymbol" translatable="false">ly</string>
+    <string name="lengthAstroParsecSymbol" translatable="false">pc</string>
+    <string name="convert">Convertir</string>
+</resources>
