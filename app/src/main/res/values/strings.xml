@@ -8,7 +8,7 @@
     <string name="time">Tiempo</string>
     <string name="lengthSIMeterSymbol" translatable="false">m</string>
     <string name="lengthSICentimeterSymbol" translatable="false">cm</string>
-    <string name="lengthSIMilimeterSymbol" translatable="false">mm</string>
+    <string name="lengthSIMillimeterSymbol" translatable="false">mm</string>
     <string name="lengthSIMicrometerSymbol" translatable="false">µm</string>
     <string name="lengthSINanometerSymbol" translatable="false">nm</string>
     <string name="lengthSIKilometerSymbol" translatable="false">km</string>
@@ -19,5 +19,45 @@
     <string name="lengthAstroAstronomicalUnitSymbol" translatable="false">AU</string>
     <string name="lengthAstroLightYearSymbol" translatable="false">ly</string>
     <string name="lengthAstroParsecSymbol" translatable="false">pc</string>
+    <string name="areaSISquareNanometerSymbol" translatable="false">nm²</string>
+    <string name="areaSISquareMicrometerSymbol" translatable="false">µm²</string>
+    <string name="areaSISquareMillimeterSymbol" translatable="false">mm²</string>
+    <string name="areaSISquareCentimeterSymbol" translatable="false">cm²</string>
+    <string name="areaSISquareMeterSymbol" translatable="false">m²</string>
+    <string name="areaSISquareKilometerSymbol" translatable="false">km²</string>
+    <string name="areaImpSquareInchSymbol" translatable="false">in²</string>
+    <string name="areaImpSquareFootSymbol" translatable="false">ft²</string>
+    <string name="areaImpSquareYardSymbol" translatable="false">yd²</string>
+    <string name="areaImpSquareMileSymbol" translatable="false">mi²</string>
+    <string name="areaImpSquareAcreSymbol" translatable="false">acre</string>
+    <string name="areaImpSquareHectareSymbol" translatable="false">ha</string>
+    <string name="volumeSICubicNanometerSymbol" translatable="false">nm³</string>
+    <string name="volumeSICubicMicrometerSymbol" translatable="false">µm³</string>
+    <string name="volumeSICubicMillimeterSymbol" translatable="false">mm³</string>
+    <string name="volumeSICubicCentimeterSymbol" translatable="false">cm³</string>
+    <string name="volumeSICubicMeterSymbol" translatable="false">m³</string>
+    <string name="volumeSICubicKilometerSymbol" translatable="false">km³</string>
+    <string name="volumeImpCubicInchSymbol" translatable="false">in³</string>
+    <string name="volumeImpCubicFootSymbol" translatable="false">ft³</string>
+    <string name="volumeImpCubicYardSymbol" translatable="false">yd³</string>
+    <string name="volumeImpCubicMileSymbol" translatable="false">mi³</string>
+    <string name="temperatureSICelsiusSymbol" translatable="false">ºC</string>
+    <string name="temperatureSIKelvinSymbol" translatable="false">K</string>
+    <string name="temperatureImpFahrenheitSymbol" translatable="false">ºF</string>
+    <string name="temperatureImpRankineSymbol" translatable="false">ºR</string>
+    <string name="massSIGramSymbol" translatable="false">g</string>
+    <string name="massSIKilogramSymbol" translatable="false">kg</string>
+    <string name="massSITonSymbol" translatable="false">t</string>
+    <string name="massImpOunceSymbol" translatable="false">oz</string>
+    <string name="massImpPoundSymbol" translatable="false">lb</string>
+    <string name="timeSINanosecondSymbol" translatable="false">ns</string>
+    <string name="timeSIMicrosecondSymbol" translatable="false">µs</string>
+    <string name="timeSIMillisecondSymbol" translatable="false">ms</string>
+    <string name="timeSISecondSymbol" translatable="false">s</string>
+    <string name="timeSIMinuteSymbol" translatable="false">min</string>
+    <string name="timeSIHourSymbol" translatable="false">h</string>
+    <string name="timeSIDaySymbol" translatable="false">d</string>
+    <string name="timeSIMonthSymbol" translatable="false">m</string>
+    <string name="timeSIYearSymbol" translatable="false">y</string>
     <string name="convert">Convertir</string>
 </resources>

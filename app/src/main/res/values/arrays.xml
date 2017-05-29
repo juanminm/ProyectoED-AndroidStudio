@@ -11,7 +11,7 @@
     <string-array name="lengthUnits">
         <item>@string/lengthSINanometerSymbol</item>
         <item>@string/lengthSIMicrometerSymbol</item>
-        <item>@string/lengthSIMilimeterSymbol</item>
+        <item>@string/lengthSIMillimeterSymbol</item>
         <item>@string/lengthSICentimeterSymbol</item>
         <item>@string/lengthSIMeterSymbol</item>
         <item>@string/lengthSIKilometerSymbol</item>
@@ -19,8 +19,59 @@
         <item>@string/lengthImpFootSymbol</item>
         <item>@string/lengthImpYardSymbol</item>
         <item>@string/lengthImpMileSymbol</item>
-        <item>@string/lengthAstroAstronomicalUnitSymbol</item>
-        <item>@string/lengthAstroLightYearSymbol</item>
-        <item>@string/lengthAstroParsecSymbol</item>
+        <!--<item>@string/lengthAstroAstronomicalUnitSymbol</item>-->
+        <!--<item>@string/lengthAstroLightYearSymbol</item>-->
+        <!--<item>@string/lengthAstroParsecSymbol</item>-->
+    </string-array>
+
+    <string-array name="areaUnits">
+        <item>@string/areaSISquareNanometerSymbol</item>
+        <item>@string/areaSISquareMillimeterSymbol</item>
+        <item>@string/areaSISquareCentimeterSymbol</item>
+        <item>@string/areaSISquareMeterSymbol</item>
+        <item>@string/areaSISquareKilometerSymbol</item>
+        <item>@string/areaImpSquareInchSymbol</item>
+        <item>@string/areaImpSquareFootSymbol</item>
+        <item>@string/areaImpSquareYardSymbol</item>
+        <item>@string/areaImpSquareMileSymbol</item>
+    </string-array>
+
+    <string-array name="volumeUnits">
+        <item>@string/volumeSICubicNanometerSymbol</item>
+        <item>@string/volumeSICubicMicrometerSymbol</item>
+        <item>@string/volumeSICubicMillimeterSymbol</item>
+        <item>@string/volumeSICubicCentimeterSymbol</item>
+        <item>@string/volumeSICubicMeterSymbol</item>
+        <item>@string/volumeSICubicKilometerSymbol</item>
+        <item>@string/volumeImpCubicInchSymbol</item>
+        <item>@string/volumeImpCubicFootSymbol</item>
+        <item>@string/volumeImpCubicYardSymbol</item>
+        <item>@string/volumeImpCubicMileSymbol</item>
+    </string-array>
+
+    <string-array name="temperatureUnits">
+        <item>@string/temperatureSICelsiusSymbol</item>
+        <item>@string/temperatureSIKelvinSymbol</item>
+        <item>@string/temperatureImpFahrenheitSymbol</item>
+        <item>@string/temperatureImpRankineSymbol</item>
+    </string-array>
+
+    <string-array name="massUnits">
+        <item>@string/massSIGramSymbol</item>
+        <item>@string/massSIKilogramSymbol</item>
+        <item>@string/massSITonSymbol</item>
+        <item>@string/massImpOunceSymbol</item>
+        <item>@string/massImpPoundSymbol</item>
+    </string-array>
+    <string-array name="timeUnits">
+        <item>@string/timeSINanosecondSymbol</item>
+        <item>@string/timeSIMicrosecondSymbol</item>
+        <item>@string/timeSIMillisecondSymbol</item>
+        <item>@string/timeSISecondSymbol</item>
+        <item>@string/timeSIMinuteSymbol</item>
+        <item>@string/timeSIHourSymbol</item>
+        <item>@string/timeSIDaySymbol</item>
+        <item>@string/timeSIMonthSymbol</item>
+        <item>@string/timeSIYearSymbol</item>
     </string-array>
 </resources>
