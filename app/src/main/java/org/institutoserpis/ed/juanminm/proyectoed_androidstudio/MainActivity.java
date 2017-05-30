@@ -7,7 +7,6 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -19,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
     Spinner unitSystemsSpinner;
     Spinner fromUnitSystemSpinner;
     Spinner toUnitSystemSpinner;
-    Button convertButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -119,16 +117,20 @@ public class MainActivity extends AppCompatActivity {
 
     protected void convert(double in) {
         double ratioFrom;
+        double subtractFrom;
         double ratioTo;
+        double addTo;
         double out;
         String system = (String) unitSystemsSpinner.getSelectedItem();
         String fromUnit = (String) fromUnitSystemSpinner.getSelectedItem();
         String toUnit = (String) toUnitSystemSpinner.getSelectedItem();
 
         ratioFrom = getRatio(system, fromUnit);
+        subtractFrom = getAdd(system, fromUnit);
         ratioTo = getRatio(system, toUnit);
+        addTo = getAdd(system, fromUnit);
 
-        out = in * ratioTo / ratioFrom;
+        out = (in  + addTo) * ratioTo / ratioFrom - subtractFrom;
 
         outputValue.setText(String.valueOf(out));
     }
@@ -137,72 +139,117 @@ public class MainActivity extends AppCompatActivity {
         double ratio = 1;
         if (system.equals(getString(R.string.length))) {
             if (unit.equals(getString(R.string.lengthSINanometerSymbol))) {
-                ratio = Globals.METER_TO_NANOMETER;
+                ratio = Globals.METER_TO_NANOMETER_RATIO;
             } else if (unit.equals(getString(R.string.lengthSIMicrometerSymbol))) {
-                ratio = Globals.METER_TO_MICROMETER;
+                ratio = Globals.METER_TO_MICROMETER_RATIO;
             } else if (unit.equals(getString(R.string.lengthSIMillimeterSymbol))) {
-                ratio = Globals.METER_TO_MILLIMETER;
+                ratio = Globals.METER_TO_MILLIMETER_RATIO;
             } else if (unit.equals(getString(R.string.lengthSICentimeterSymbol))) {
-                ratio = Globals.METER_TO_CENTIMETER;
+                ratio = Globals.METER_TO_CENTIMETER_RATIO;
             } else if (unit.equals(getString(R.string.lengthSIKilometerSymbol))) {
-                ratio = Globals.METER_TO_KILOMETER;
+                ratio = Globals.METER_TO_KILOMETER_RATIO;
             } else if (unit.equals(getString(R.string.lengthImpInchSymbol))) {
-                ratio = Globals.METER_TO_INCH;
+                ratio = Globals.METER_TO_INCH_RATIO;
             } else if (unit.equals(getString(R.string.lengthImpFootSymbol))) {
-                ratio = Globals.METER_TO_FOOT;
+                ratio = Globals.METER_TO_FOOT_RATIO;
             } else if (unit.equals(getString(R.string.lengthImpYardSymbol))) {
-                ratio = Globals.METER_TO_YARD;
+                ratio = Globals.METER_TO_YARD_RATIO;
             } else if (unit.equals(getString(R.string.lengthImpMileSymbol))) {
-                ratio = Globals.METER_TO_MILE;
+                ratio = Globals.METER_TO_MILE_RATIO;
             }
         } else if (system.equals(getString(R.string.area))) {
             if (unit.equals(getString(R.string.areaSISquareNanometerSymbol))) {
-                ratio = Globals.SQUAREMETER_TO_SQUARENANOMETER;
+                ratio = Globals.SQUAREMETER_TO_SQUARENANOMETER_RATIO;
             } else if (unit.equals(getString(R.string.areaSISquareMicrometerSymbol))) {
-                ratio = Globals.SQUAREMETER_TO_SQUAREMICROMETER;
+                ratio = Globals.SQUAREMETER_TO_SQUAREMICROMETER_RATIO;
             } else if (unit.equals(getString(R.string.areaSISquareMillimeterSymbol))) {
-                ratio = Globals.SQUAREMETER_TO_SQUAREMILLIMETER;
+                ratio = Globals.SQUAREMETER_TO_SQUAREMILLIMETER_RATIO;
             } else if (unit.equals(getString(R.string.areaSISquareCentimeterSymbol))) {
-                ratio = Globals.SQUAREMETER_TO_SQUARECENTIMETER;
+                ratio = Globals.SQUAREMETER_TO_SQUARECENTIMETER_RATIO;
             } else if (unit.equals(getString(R.string.areaSISquareKilometerSymbol))) {
-                ratio = Globals.SQUAREMETER_TO_SQUAREKILOMETER;
+                ratio = Globals.SQUAREMETER_TO_SQUAREKILOMETER_RATIO;
             } else if (unit.equals(getString(R.string.areaImpSquareInchSymbol))) {
-                ratio = Globals.SQUAREMETER_TO_SQUAREINCH;
+                ratio = Globals.SQUAREMETER_TO_SQUAREINCH_RATIO;
             } else if (unit.equals(getString(R.string.areaImpSquareFootSymbol))) {
-                ratio = Globals.SQUAREMETER_TO_SQUAREFOOT;
+                ratio = Globals.SQUAREMETER_TO_SQUAREFOOT_RATIO;
             } else if (unit.equals(getString(R.string.areaImpSquareYardSymbol))) {
-                ratio = Globals.SQUAREMETER_TO_SQUAREYARD;
+                ratio = Globals.SQUAREMETER_TO_SQUAREYARD_RATIO;
             } else if (unit.equals(getString(R.string.areaImpSquareMileSymbol))) {
-                ratio = Globals.SQUAREMETER_TO_SQUAREMILE;
+                ratio = Globals.SQUAREMETER_TO_SQUAREMILE_RATIO;
             } else if (unit.equals(getString(R.string.areaImpSquareAcreSymbol))) {
-                ratio = Globals.SQUAREMETER_TO_ACRE;
+                ratio = Globals.SQUAREMETER_TO_ACRE_RATIO;
             } else if (unit.equals(getString(R.string.areaImpSquareHectareSymbol))) {
-                ratio = Globals.SQUAREMETER_TO_HECTARE;
+                ratio = Globals.SQUAREMETER_TO_HECTARE_RATIO;
             }
         } else if (system.equals(getString(R.string.volume))) {
             if (unit.equals(getString(R.string.volumeSICubicNanometerSymbol))) {
-                ratio = Globals.CUBICMETER_TO_CUBICNANOMETER;
+                ratio = Globals.CUBICMETER_TO_CUBICNANOMETER_RATIO;
             } else if (unit.equals(getString(R.string.volume))) {
-                ratio = Globals.CUBICMETER_TO_CUBICMICROMETER;
+                ratio = Globals.CUBICMETER_TO_CUBICMICROMETER_RATIO;
             } else if (unit.equals(getString(R.string.volume))) {
-                ratio = Globals.CUBICMETER_TO_CUBICMILLIMETER;
+                ratio = Globals.CUBICMETER_TO_CUBICMILLIMETER_RATIO;
             } else if (unit.equals(getString(R.string.volume))) {
-                ratio = Globals.CUBICMETER_TO_CUBICCENTIMETER;
+                ratio = Globals.CUBICMETER_TO_CUBICCENTIMETER_RATIO;
             } else if (unit.equals(getString(R.string.volume))) {
-                ratio = Globals.CUBICMETER_TO_CUBICKILOMETER;
+                ratio = Globals.CUBICMETER_TO_CUBICKILOMETER_RATIO;
             } else if (unit.equals(getString(R.string.volume))) {
-                ratio = Globals.CUBICMETER_TO_CUBICINCH;
+                ratio = Globals.CUBICMETER_TO_CUBICINCH_RATIO;
             } else if (unit.equals(getString(R.string.volume))) {
-                ratio = Globals.CUBICMETER_TO_CUBICFOOT;
+                ratio = Globals.CUBICMETER_TO_CUBICFOOT_RATIO;
             } else if (unit.equals(getString(R.string.volume))) {
-                ratio = Globals.CUBICMETER_TO_MILLILITER;
+                ratio = Globals.CUBICMETER_TO_MILLILITER_RATIO;
             } else if (unit.equals(getString(R.string.volume))) {
-                ratio = Globals.CUBICMETER_TO_LITER;
+                ratio = Globals.CUBICMETER_TO_LITER_RATIO;
             }
         } else if (system.equals(getString(R.string.mass))) {
+            if (unit.equals(getString(R.string.massSIGramSymbol))) {
+                ratio = Globals.KILOGRAM_TO_GRAM_RATIO;
+            } else if (unit.equals(getString(R.string.massSITonSymbol))) {
+                ratio = Globals.KILOGRAM_TO_TON_RATIO;
+            } else if (unit.equals(getString(R.string.massImpOunceSymbol))) {
+                ratio = Globals.KILOGRAM_TO_OUNCE_RATIO;
+            } else if (unit.equals(getString(R.string.massImpPoundSymbol))) {
+                ratio = Globals.KILOGRAM_TO_POUND_RATIO;
+            }
         } else if (system.equals(getString(R.string.temperature))) {
-        } else if (system.equals(getString(R.string.temperature))) {
+            if (unit.equals(getString(R.string.temperatureImpFahrenheitSymbol))
+                    || unit.equals(getString(R.string.temperatureImpRankineSymbol))) {
+                ratio = Globals.CELSIUS_TO_FAHRENHEIT_RATIO;
+            }
+        } else if (system.equals(getString(R.string.time))) {
+            if (unit.equals(getString(R.string.timeSINanosecondSymbol))) {
+                ratio = Globals.SECOND_TO_NANOSECOND_RATIO;
+            } else if (unit.equals(getString(R.string.timeSIMicrosecondSymbol))) {
+                ratio = Globals.SECOND_TO_MICROSECOND_RATIO;
+            } else if (unit.equals(getString(R.string.timeSIMillisecondSymbol))) {
+                ratio = Globals.SECOND_TO_MILLISECOND_RATIO;
+            } else if (unit.equals(getString(R.string.timeSIMinuteSymbol))) {
+                ratio = Globals.SECOND_TO_MINUTE_RATIO;
+            } else if (unit.equals(getString(R.string.timeSIHourSymbol))) {
+                ratio = Globals.SECOND_TO_HOUR_RATIO;
+            } else if (unit.equals(getString(R.string.timeSIDaySymbol))) {
+                ratio = Globals.SECOND_TO_DAY_RATIO;
+            } else if (unit.equals(getString(R.string.timeSIMonthSymbol))) {
+                ratio = Globals.SECOND_TO_MONTH_RATIO;
+            } else if (unit.equals(getString(R.string.timeSIYearSymbol))) {
+                ratio = Globals.SECOND_TO_YEAR_RATIO;
+            }
         }
         return ratio;
+    }
+
+    private double getAdd(String system, String unit) {
+        double add = 0;
+
+        if (system.equals(getString(R.string.temperature))) {
+            if (unit.equals(getString(R.string.temperatureSIKelvinSymbol))) {
+                add = Globals.CELSIUS_TO_KELVIN_ADD;
+            } else if (unit.equals(getString(R.string.temperatureImpFahrenheitSymbol))) {
+                add = Globals.CELSIUS_TO_FAHRENHEIT_ADD;
+            } else if (unit.equals(getString(R.string.temperatureImpRankineSymbol))) {
+                add = Globals.CELSIUS_TO_RANKINE_ADD;
+            }
+        }
+        return add;
     }
 }
