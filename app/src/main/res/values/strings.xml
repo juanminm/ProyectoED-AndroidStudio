@@ -41,6 +41,8 @@
     <string name="volumeImpCubicFootSymbol" translatable="false">ft³</string>
     <string name="volumeImpCubicYardSymbol" translatable="false">yd³</string>
     <string name="volumeImpCubicMileSymbol" translatable="false">mi³</string>
+    <string name="volumeImpLiterSymbol" translatable="false">l</string>
+    <string name="volumeImpMilliliterSymbol" translatable="false">ml</string>
     <string name="temperatureSICelsiusSymbol" translatable="false">ºC</string>
     <string name="temperatureSIKelvinSymbol" translatable="false">K</string>
     <string name="temperatureImpFahrenheitSymbol" translatable="false">ºF</string>
@@ -57,7 +59,7 @@
     <string name="timeSIMinuteSymbol" translatable="false">min</string>
     <string name="timeSIHourSymbol" translatable="false">h</string>
     <string name="timeSIDaySymbol" translatable="false">d</string>
-    <string name="timeSIMonthSymbol" translatable="false">m</string>
+    <string name="timeSIMonthSymbol" translatable="false">mo</string>
     <string name="timeSIYearSymbol" translatable="false">y</string>
     <string name="convert">Convertir</string>
 </resources>

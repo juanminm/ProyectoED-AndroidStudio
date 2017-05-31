@@ -116,21 +116,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     protected void convert(double in) {
-        double ratioFrom;
-        double subtractFrom;
-        double ratioTo;
-        double addTo;
+        double fromRatio;
+        double fromSubtract;
+        double toRatio;
+        double toAddition;
         double out;
         String system = (String) unitSystemsSpinner.getSelectedItem();
         String fromUnit = (String) fromUnitSystemSpinner.getSelectedItem();
         String toUnit = (String) toUnitSystemSpinner.getSelectedItem();
 
-        ratioFrom = getRatio(system, fromUnit);
-        subtractFrom = getAdd(system, fromUnit);
-        ratioTo = getRatio(system, toUnit);
-        addTo = getAdd(system, fromUnit);
+        fromRatio = getRatio(system, fromUnit);
+        fromSubtract = getAdd(system, fromUnit);
+        toRatio = getRatio(system, toUnit);
+        toAddition = getAdd(system, toUnit);
 
-        out = (in  + addTo) * ratioTo / ratioFrom - subtractFrom;
+        out = (in  + toAddition) * toRatio / fromRatio - fromSubtract;
 
         outputValue.setText(String.valueOf(out));
     }
@@ -184,21 +184,21 @@ public class MainActivity extends AppCompatActivity {
         } else if (system.equals(getString(R.string.volume))) {
             if (unit.equals(getString(R.string.volumeSICubicNanometerSymbol))) {
                 ratio = Globals.CUBICMETER_TO_CUBICNANOMETER_RATIO;
-            } else if (unit.equals(getString(R.string.volume))) {
+            } else if (unit.equals(getString(R.string.volumeSICubicMicrometerSymbol))) {
                 ratio = Globals.CUBICMETER_TO_CUBICMICROMETER_RATIO;
-            } else if (unit.equals(getString(R.string.volume))) {
+            } else if (unit.equals(getString(R.string.volumeSICubicMillimeterSymbol))) {
                 ratio = Globals.CUBICMETER_TO_CUBICMILLIMETER_RATIO;
-            } else if (unit.equals(getString(R.string.volume))) {
+            } else if (unit.equals(getString(R.string.volumeSICubicCentimeterSymbol))) {
                 ratio = Globals.CUBICMETER_TO_CUBICCENTIMETER_RATIO;
-            } else if (unit.equals(getString(R.string.volume))) {
+            } else if (unit.equals(getString(R.string.volumeSICubicKilometerSymbol))) {
                 ratio = Globals.CUBICMETER_TO_CUBICKILOMETER_RATIO;
-            } else if (unit.equals(getString(R.string.volume))) {
+            } else if (unit.equals(getString(R.string.volumeImpCubicInchSymbol))) {
                 ratio = Globals.CUBICMETER_TO_CUBICINCH_RATIO;
-            } else if (unit.equals(getString(R.string.volume))) {
+            } else if (unit.equals(getString(R.string.volumeImpCubicFootSymbol))) {
                 ratio = Globals.CUBICMETER_TO_CUBICFOOT_RATIO;
-            } else if (unit.equals(getString(R.string.volume))) {
+            } else if (unit.equals(getString(R.string.volumeImpMilliliterSymbol))) {
                 ratio = Globals.CUBICMETER_TO_MILLILITER_RATIO;
-            } else if (unit.equals(getString(R.string.volume))) {
+            } else if (unit.equals(getString(R.string.volumeImpLiterSymbol))) {
                 ratio = Globals.CUBICMETER_TO_LITER_RATIO;
             }
         } else if (system.equals(getString(R.string.mass))) {
