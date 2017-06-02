@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+    <string name="app_name">Convertidor</string>
+    <string name="length">Longitud</string>
+    <string name="volume">Volumen</string>
+    <string name="area">Área</string>
+    <string name="mass">Masa</string>
+    <string name="temperature">Temperatura</string>
+    <string name="time">Tiempo</string>
+    <string name="convert">Convertir</string>
+    <string name="fromField">De: </string>
+    <string name="toField">A: </string>
+</resources>

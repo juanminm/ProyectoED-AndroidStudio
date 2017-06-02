@@ -6,6 +6,7 @@
         <item>@string/volume</item>
         <item>@string/mass</item>
         <item>@string/temperature</item>
+        <item>@string/time</item>
     </string-array>
 
     <string-array name="lengthUnits">
@@ -19,9 +20,9 @@
         <item>@string/lengthImpFootSymbol</item>
         <item>@string/lengthImpYardSymbol</item>
         <item>@string/lengthImpMileSymbol</item>
-        <!--<item>@string/lengthAstroAstronomicalUnitSymbol</item>-->
-        <!--<item>@string/lengthAstroLightYearSymbol</item>-->
-        <!--<item>@string/lengthAstroParsecSymbol</item>-->
+        <item>@string/lengthAstroAstronomicalUnitSymbol</item>
+        <item>@string/lengthAstroLightYearSymbol</item>
+        <item>@string/lengthAstroParsecSymbol</item>
     </string-array>
 
     <string-array name="areaUnits">

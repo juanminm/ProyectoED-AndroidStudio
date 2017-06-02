@@ -1,11 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Convertidor</string>
-    <string name="length">Longitud</string>
-    <string name="volume">Volumen</string>
-    <string name="area">Área</string>
-    <string name="mass">Masa</string>
-    <string name="temperature">Temperatura</string>
-    <string name="time">Tiempo</string>
+    <string name="app_name">Converter</string>
+    <string name="length">Length</string>
+    <string name="area">Area</string>
+    <string name="mass">Mass</string>
+    <string name="temperature">Temperature</string>
+    <string name="volume">Volume</string>
+    <string name="time">Time</string>
+    <string name="convert">Convert</string>
+    <string name="fromField">From: </string>
+    <string name="toField">To: </string>
+
     <string name="lengthSIMeterSymbol" translatable="false">m</string>
     <string name="lengthSICentimeterSymbol" translatable="false">cm</string>
     <string name="lengthSIMillimeterSymbol" translatable="false">mm</string>
@@ -61,5 +66,4 @@
     <string name="timeSIDaySymbol" translatable="false">d</string>
     <string name="timeSIMonthSymbol" translatable="false">mo</string>
     <string name="timeSIYearSymbol" translatable="false">y</string>
-    <string name="convert">Convertir</string>
 </resources>

@@ -14,6 +14,9 @@ public class Globals {
     public static final double METER_TO_FOOT_RATIO = 3.28084;
     public static final double METER_TO_YARD_RATIO = 1.09361;
     public static final double METER_TO_MILE_RATIO = 6.21371E-4;
+    public static final double METER_TO_ASTRONOMICALUNITS_RATIO = 6.6845871E-12;
+    public static final double METER_TO_LIGHTYEAR_RATIO = 1.05702326E-16;
+    public static final double METER_TO_PARSEC_RATIO = 3.24085181E-17;
 
     public static final double SQUAREMETER_TO_SQUARENANOMETER_RATIO = 1E18;
     public static final double SQUAREMETER_TO_SQUAREMICROMETER_RATIO = 1E12;

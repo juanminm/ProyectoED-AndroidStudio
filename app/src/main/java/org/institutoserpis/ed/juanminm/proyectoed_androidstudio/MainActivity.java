@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
                 inputValue.setText("0");
 
-                ArrayAdapter adapter = new ArrayAdapter<String>(MainActivity.this,
+                ArrayAdapter adapter = new ArrayAdapter<>(MainActivity.this,
                         android.R.layout.simple_spinner_item, a);
                 adapter.notifyDataSetChanged();
                 fromUnitSystemSpinner.setAdapter(adapter);
@@ -156,6 +156,12 @@ public class MainActivity extends AppCompatActivity {
                 ratio = Globals.METER_TO_YARD_RATIO;
             } else if (unit.equals(getString(R.string.lengthImpMileSymbol))) {
                 ratio = Globals.METER_TO_MILE_RATIO;
+            } else if (unit.equals(getString(R.string.lengthAstroAstronomicalUnitSymbol))) {
+                ratio = Globals.METER_TO_ASTRONOMICALUNITS_RATIO;
+            } else if (unit.equals(getString(R.string.lengthAstroLightYearSymbol))) {
+                ratio = Globals.METER_TO_LIGHTYEAR_RATIO;
+            } else if (unit.equals(getString(R.string.lengthAstroParsecSymbol))) {
+                ratio = Globals.METER_TO_PARSEC_RATIO;
             }
         } else if (system.equals(getString(R.string.area))) {
             if (unit.equals(getString(R.string.areaSISquareNanometerSymbol))) {
